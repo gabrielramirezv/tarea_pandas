@@ -27,6 +27,17 @@ def parse_arguments():
         default="summary",
     )
 
+        parser.add_argument(
+        "--plot",
+        choices=["none", "top_regulators", "type_distribution"],
+        default="none",
+    )
+
+    parser.add_argument(
+        "--plot_file",
+        default="figures/regulon_plot.png",
+    )
+
     parser.add_argument(
         "--top_n",
         type=int,
